@@ -1,0 +1,78 @@
+.hovercontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.blankSpace {
+  height: 20px;
+}
+
+.profileIcon i {
+  height: 10px;
+  width: 30px;
+
+  padding-top: 20px;
+  padding-right: 30px;
+}
+.profileName {
+  padding-top: 10px;
+  width: 180px;
+}
+
+.hoverRowOne {
+  border-bottom: 1px solid #dddddd;
+  height: 60px;
+  padding: 1px 1px 1px 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1px;
+  padding-top: 10px;
+}
+.options {
+  padding-top: 20px;
+}
+
+.hoverRowTwo {
+  /* border-bottom: 1px solid grey; */
+  height: 35px;
+  padding: 1px 1px 1px 1px;
+}
+
+.hoverRowThree {
+  /* border-bottom: 1px solid grey; */
+  height: 35px;
+  padding: 1px 1px 1px 1px;
+}
+
+.hoverRowFour {
+  /* border-bottom: 1px solid grey; */
+  height: 35px;
+  padding: 1px 1px 1px 1px;
+}
+
+.hoverRowFive {
+  /* border-bottom: 1px solid grey; */
+  height: 35px;
+  padding: 1px 1px 1px 1px;
+}
+
+.course {
+  justify-content: flex-start;
+
+  display: flex;
+  flex-direction: row;
+  /* background-color: aqua; */
+  gap: 20px;
+  height: 55px;
+}
+
+.courseIcon img {
+  width: 60px;
+  height: 60px;
+}
+.courseDesc {
+  padding-top: 5px;
+  font-weight: bold;
+  font-size: normal;
+}

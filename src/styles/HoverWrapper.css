@@ -1,0 +1,24 @@
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding-bottom: 20px;
+  padding-top: 22px;
+}
+
+.tooltip {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+  width: 200px;
+}
+
+.tooltip-container:hover .tooltip {
+  display: block;
+}

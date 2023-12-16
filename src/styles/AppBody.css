@@ -1,0 +1,26 @@
+.AppBody {
+  /* background-color: aquamarine; */
+  margin-top: 20px;
+  /* width: 100vh; */
+  display: flex;
+  flex-direction: row;
+}
+
+.menu {
+  width: 500px;
+  height: 500px;
+  background-color: antiquewhite;
+  border: 2px solid gray;
+}
+
+.content {
+  /* width: 100%; */
+  margin-left: 10px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.actionArrow {
+  margin-left: 10px;
+}

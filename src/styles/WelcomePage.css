@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost&family=Nunito&display=swap");
+
+.WelcomePageWrapper {
+  /* background-color: aqua; */
+  height: 40vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 50px;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
+.welcomeTextWrapper {
+  width: 50%;
+  font-weight: bolder;
+  font-size: larger;
+}
+.welcomeTextWrapper h1 {
+  font-family: "Jost", sans-serif;
+}
+
+.imagesWrapper {
+  /* background-color: brown; */
+  width: 50%;
+  overflow: hidden;
+}
+
+.imagesWrapper img {
+  width: 98%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.appNameLabel {
+  color: rgb(40, 40, 135);
+}
+
+.landingPageParagraph {
+  font-weight: lighter;
+  font-size: smaller;
+  color: rgb(79, 79, 80);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.welcomePageButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.freeCourses {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgb(40, 40, 135);
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.exploreBlog {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgb(198, 198, 198);
+  color: #040404;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,67 @@
+.VideoSection {
+    width: 90%;
+    height: 160px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .VideoSection :hover {
+    cursor: pointer;
+  }
+  
+  .vdoSectionColOne {
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  .vdoSectionColOne img {
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .vdosectionColtwo {
+    margin-top: 5px;
+  }
+  
+  .videoName {
+    font-size: large;
+    font-weight: bold;
+  }
+  
+  .videoDesc {
+    margin-top: 5px;
+    font-size: medium;
+    font-weight: light;
+    color: rgb(57, 56, 56);
+  }
+  
+  .videoMetadata {
+    margin-top: 7px;
+  }
+  
+  .authorName {
+    font-size: small;
+    font-weight: light;
+    color: rgb(101, 100, 100);
+  }
+  
+  .ratings {
+    font-size: medium;
+    font-weight: bolder;
+    color: rgb(144, 34, 4);
+  }
+  
+  .otherDetails {
+    font-size: small;
+    font-weight: light;
+    color: rgb(101, 100, 100);
+  }
+  

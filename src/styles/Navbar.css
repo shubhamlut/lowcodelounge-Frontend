@@ -1,0 +1,55 @@
+.Navbar {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.NavbarColOne {
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+  align-items: start;
+  padding-left: 100px;
+}
+
+.NavbarColTwo {
+  display: flex;
+  flex-direction: row;
+  width: 650px;
+  background-color: azure;
+  border-radius: 15px;
+}
+
+.NavbarSearchBar {
+  display: flex;
+  flex-direction: row;
+  width: 650px;
+  height: 35px;
+}
+.NavbarSearchBar input {
+  width: 100%;
+  border-radius: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.NavbarColThree {
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+  align-items: end;
+  padding-right: 100px;
+}
+
+.profileIcon {
+  height: 50px;
+  width: 50px;
+  /* background-color: white; */
+}
+
+
