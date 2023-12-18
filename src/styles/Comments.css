@@ -1,0 +1,72 @@
+.Comments {
+  width: 90vh;
+  height: 150px;
+  padding-left: 10px;
+  box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-left: 50px;
+}
+
+.commentsTextArea {
+  width: 88vh;
+  height: 100px;
+  resize: none;
+  border-radius: 5px;
+}
+.commentHeader {
+  text-decoration: underline;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.btnPostComment {
+  padding: 3px 3px 3px 3px;
+  background-color: rgb(40, 40, 135);
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+.addedComments {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 10px;
+  height: 100px;
+}
+
+.commentsProfileIcon {
+  width: 100px;
+  text-align: center;
+}
+.profileCommentName {
+  font-weight: bold;
+}
+.profileCommentName span {
+  font-weight: lighter;
+  font-size: small;
+}
+
+.profileComment {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.replyButtonComment {
+  padding: 3px 3px 3px 3px;
+  background-color: rgb(40, 40, 135);
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.addedComment {
+  border: 1px solid rgb(225, 225, 225);
+  border-radius: 5px;
+  width: 100%;
+  padding: 5px;
+}
+
+.commentsProfileIcon img {
+  width: 100%;
+}

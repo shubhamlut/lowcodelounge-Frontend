@@ -1,8 +1,15 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 import "../styles/Card.css";
 
-const Card = () => {
+const Card = ({ courseId, cardLabel, cardDesc, courseDesc }) => {
+  const navigate = useNavigate();
+  //Action Functions
+  const handleButtonClick = (courseId, courseViewer) => {
+    navigate(courseViewer);
+    console.log(courseId);
+  };
+  //Component JSX
   return (
     <div className="card">
       <div className="cardPicture">
@@ -13,11 +20,18 @@ const Card = () => {
       </div>
       <div className="cardDetails">
         <div className="cardDetailsColOne">
-          <div className="cardLabel">Unqork Zero to Expert</div>
-          <div className="cardDesc">Free Course</div>
-          <div className="courseDesc">Unqork is at the forefront of the no-code movement, empowering organizations to accelerate their digital transformation without relying on traditional software development methods. With Unqork, users, including business analysts and other non-developers, can design, build, and deploy sophisticated web applications through a visual interface.</div>
+          <div className="cardLabel">{cardLabel}</div>
+          <div className="cardDesc">{cardDesc}</div>
+          <div className="courseDesc">{courseDesc}</div>
           <div className="cardButton">
-            <button>Start Watching</button>
+            <button
+              key={courseId}
+              onClick={() => {
+                handleButtonClick(courseId, "/courseViewer");
+              }}
+            >
+              Start Watching
+            </button>
           </div>
         </div>
       </div>

@@ -1,16 +1,12 @@
 .card {
   background-color: rgb(244, 244, 241);
   width: 40vh;
-  height: 62vh;
+  height: 50vh;
   margin-left: 10px;
   margin-top: 5px;
   border-radius: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border: 1px solid rgb(199, 199, 199);
-}
-
-.card :hover {
-  cursor: pointer;
 }
 
 .cardPicture img {
@@ -98,12 +94,17 @@
   margin-bottom: 10px;
 }
 
-.cardButton button{
-    height: 30px;
-    background-color: rgb(40, 40, 135);
-    border-radius: 5px;
-    border: none;
-    font-weight: bolder;
-    color: white;
-    width: 120px;
+.cardButton button {
+  height: 30px;
+  background-color: rgb(40, 40, 135);
+  border-radius: 5px;
+  border: none;
+  font-weight: bolder;
+  color: white;
+  width: 120px;
+  cursor: pointer;
+}
+
+.cardButton :hover {
+  background-color: rgb(89, 89, 187);
 }

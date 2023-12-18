@@ -13,7 +13,7 @@ const Home = () => {
       <Navbar />
       <WelcomePage/>
       <CoursesCardContainer/>
-      <Footer />
+      
     </div>
   );
 };

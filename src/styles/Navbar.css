@@ -17,6 +17,18 @@
   padding-left: 100px;
 }
 
+
+.NavbarColOne div{
+  cursor: pointer;
+}
+
+.NavbarColTwo div{
+  cursor: pointer;
+}
+.NavbarColThree div{
+  cursor: pointer;
+}
+
 .NavbarColTwo {
   display: flex;
   flex-direction: row;

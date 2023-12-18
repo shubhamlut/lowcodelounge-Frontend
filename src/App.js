@@ -1,12 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Routes,
-  Route,
-  Link,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./components/Home";
 import Profile from "./components/Profile";
@@ -15,7 +8,9 @@ import AccountSettings from "./components/AccountSettings";
 import Help from "./components/Help";
 import Logout from "./components/Logout";
 import Blog from "./components/Blog";
-
+import CourseViewer from "./components/CourseViewer";
+import VideoPlayer from "./components/VideoPlayer";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -30,7 +25,10 @@ function App() {
         <Route path="/logout" element={<Logout />} />
         <Route path="/listcourses" element={<Logout />} />
         <Route path="/course" element={<Help />} />
+        <Route path="/courseViewer" element={<CourseViewer />} />
+        <Route path="/videoPlayer" element={<VideoPlayer />} />
       </Routes>
+      {/* <Footer/> */}
     </Router>
   );
 }

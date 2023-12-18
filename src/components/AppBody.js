@@ -3,6 +3,27 @@ import VideoSection from "./VideoSection";
 import "../styles/AppBody.css";
 
 const AppBody = () => {
+  //API sample response
+  const videosData = [
+    {
+      videoName: "Unqork Zero to Expert | Introduction #1",
+      videoThumbnail:
+        "https://i.ytimg.com/vi/fszTmNhNtRQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA98Z8OE_07nVtnx8ATm8cNs2qStg",
+      videoDescription:
+        "Unqork is a no-code platform that allows users to build complex and scalable enterprise applications without writing a single line of code.",
+      videoDuration: "15 mins",
+      videoId: "fszTmNhNtRQ",
+    },
+    {
+      videoName: "Unqork Zero to Expert | Introduction #1",
+      videoThumbnail:
+        "https://i.ytimg.com/vi/fszTmNhNtRQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA98Z8OE_07nVtnx8ATm8cNs2qStg",
+      videoDescription:
+        "Unqork is a no-code platform that allows users to build complex and scalable enterprise applications without writing a single line of code.",
+      videoDuration: "15 mins",
+      videoId: "xNRJwmlRBNU",
+    },
+  ];
   //This useState and function is used to change the arror direction which is further used to open and close the menu
   const [arrowDirection, setArrowDirection] = useState("left");
   const toggleArrowDirection = (e) => {
@@ -21,16 +42,21 @@ const AppBody = () => {
           onClick={toggleArrowDirection}
         ></i>
       </div>
-      {arrowDirection==="left" && <div className="menu">Menu Options</div>}
-      
+      {arrowDirection === "left" && <div className="menu">Menu Options</div>}
+
       <div className="content">
-        <VideoSection />
-        <VideoSection />
-        <VideoSection />
-        <VideoSection />
-        <VideoSection />
-        <VideoSection />
-        <VideoSection />
+      {/* using map function to create multiple video sections based on API response */}
+        {videosData.map((videoData) => {
+          return (
+            <VideoSection
+              videoThumbnail={videoData.videoThumbnail}
+              videoName={videoData.videoName}
+              videoDesc={videoData.videoDescription}
+              videoDuration={videoData.videoDuration}
+              videoId={videoData.videoId}
+            />
+          );
+        })}
       </div>
     </div>
   );
