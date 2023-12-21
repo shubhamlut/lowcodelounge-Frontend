@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+.loginwrapper {
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  margin: 0;
+}
+.loginContainer {
+  /* background-color: aqua; */
+  height: 40vh;
+  border-radius: 10px;
+  width: 40vh;
+  box-shadow: 0ch;
+  position: relative;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.loginheader {
+  color: grey;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+#email {
+  margin-bottom: 10px;
+  padding: 2px 2px 5px 2px;
+  border-color: grey;
+  border-radius: 5px;
+  font-size: small;
+  width: 280px;
+  height: 20px;
+}
+#password {
+  margin-bottom: 10px;
+  padding: 2px 2px 5px 2px;
+  border-radius: 5px;
+  border-color: grey;
+  font-size: small;
+  width: 280px;
+  height: 20px;
+}
+
+.loginContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 10vh; /* Optional: Adjust the height based on your design */
+}
+
+.loginButton {
+  /*  display: flex; */
+  width: 284px;
+  font-family: "Nunito", sans-serif;
+}
+
+.primary-button {
+  background-color: rgb(27, 112, 202);
+  color: white;
+  height: 25px;
+  width: 60px;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.loginButton input:hover {
+  border: 2px solid rgb(192, 188, 188);
+  cursor: pointer;
+}
+
+.loginContentTwo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 15px;
+}
+
+.loginContentTwo a {
+  text-decoration: none;
+  color: rgb(27, 112, 202);
+}
+
+.loginContentTwo a:hover {
+  text-decoration: underline;
+}
+
+.loginWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.loginErrorMessage {
+  font-size: small;
+  display: flex;
+  margin-top: 20px;
+  background-color: rgb(245, 202, 200);
+  width: 205px;
+  height: 30px;
+  color: red;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  /* border: 1px solid rgb(210, 29, 29); */
+}
+
+.loginSuccessMessage{
+
+    font-size: small;
+  display: flex;
+  margin-top: 20px;
+  background-color: rgb(194, 228, 178);
+  width: 100px;
+  height: 30px;
+  color: rgb(0, 0, 0);
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  /* border: 1px solid rgb(18, 117, 36); */
+}

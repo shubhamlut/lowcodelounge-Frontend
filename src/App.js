@@ -11,6 +11,7 @@ import Blog from "./components/Blog";
 import CourseViewer from "./components/CourseViewer";
 import VideoPlayer from "./components/VideoPlayer";
 import Footer from "./components/Footer";
+import Loginscreen from "./components/Loginscreen";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/course" element={<Help />} />
         <Route path="/courseViewer" element={<CourseViewer />} />
         <Route path="/videoPlayer" element={<VideoPlayer />} />
+        <Route path="/login" element={<Loginscreen />} />
       </Routes>
       {/* <Footer/> */}
     </Router>

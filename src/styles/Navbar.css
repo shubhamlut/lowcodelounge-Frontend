@@ -17,15 +17,14 @@
   padding-left: 100px;
 }
 
-
-.NavbarColOne div{
+.NavbarColOne div {
   cursor: pointer;
 }
 
-.NavbarColTwo div{
+.NavbarColTwo div {
   cursor: pointer;
 }
-.NavbarColThree div{
+.NavbarColThree div {
   cursor: pointer;
 }
 
@@ -64,4 +63,34 @@
   /* background-color: white; */
 }
 
+.rightSideColumn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+ 
+}
 
+.NavbarColFour {
+  display: flex;
+  gap:30px;
+}
+
+.NavbarColFour button {
+  cursor: pointer;
+}
+
+
+.navbarBtn{
+  width: 70px;
+  height: 25px;
+  border-radius: 4px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.navbarBtn:hover{
+  background-color: rgb(165, 164, 164);
+  color: black;
+}

@@ -21,7 +21,7 @@ const HoverWrapper = ({ label,HoverContent,toolTipWrapperWidth }) => {
     >
       {label}
       {isTooltipVisible && (
-        <div className="tooltip" style={{width:{toolTipWrapperWidth}}}>
+        <div className="tooltip" style={{width:parseInt(toolTipWrapperWidth,10)}}>
          
           {/* <div className="tooltipHeader">Tool tip header</div> */}
           <div className="tooltipContent">
