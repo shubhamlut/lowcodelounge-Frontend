@@ -1,20 +1,27 @@
 // This files contains all the CRUD functions
 
 const create = async (url, requestBody) => {
+  let response;
   try {
-    const response = await fetch(url, {
+    response = await fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(requestBody),
     });
-
-    const jsonResponse = await response.json();
-
-    return jsonResponse;
+    if (!response.ok) {
+      throw new Error(response.status);
+    } else {
+      const jsonResponse = await response.json();
+      return jsonResponse;
+    }
   } catch (error) {
-    return error
+    const jsonResponse = await response.json();
+    return {
+      success: false,
+      jsonResponse,
+    };
   }
 };
 

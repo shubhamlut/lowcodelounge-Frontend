@@ -74,7 +74,9 @@ const Navbar = () => {
             </button>
           </div>
           <div className="tooltip-container">
-            <button className="navbarBtn">Signup</button>
+            <button onClick={() => {
+                handleOnClickOption("/signup");
+              }} className="navbarBtn">Signup</button>
           </div>
         </div>
       </div>

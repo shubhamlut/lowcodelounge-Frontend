@@ -12,6 +12,7 @@ import CourseViewer from "./components/CourseViewer";
 import VideoPlayer from "./components/VideoPlayer";
 import Footer from "./components/Footer";
 import Loginscreen from "./components/Loginscreen";
+import Signup from "./components/Signup";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/courseViewer" element={<CourseViewer />} />
         <Route path="/videoPlayer" element={<VideoPlayer />} />
         <Route path="/login" element={<Loginscreen />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
       {/* <Footer/> */}
     </Router>
