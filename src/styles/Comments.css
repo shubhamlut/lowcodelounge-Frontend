@@ -33,7 +33,7 @@
   flex-direction: row;
   gap: 10px;
   margin-bottom: 10px;
-  height: 100px;
+  /* height: 100px; */
 }
 
 .commentsProfileIcon {
@@ -69,4 +69,9 @@
 
 .commentsProfileIcon img {
   width: 100%;
+}
+
+.replyAddedTextContainer {
+  margin-left: 30px;
+  width: 27vw;
 }

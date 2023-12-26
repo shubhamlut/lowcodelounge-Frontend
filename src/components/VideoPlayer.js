@@ -6,6 +6,7 @@ import Notes from "./Notes";
 import Comments from "./Comments";
 import Footer from "./Footer";
 
+
 const VideoPlayer = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
@@ -29,13 +30,14 @@ const VideoPlayer = () => {
               ></iframe>
             </div>
             <div className="videoNotes">
-              <Notes />
+              <Notes videoId={videoId} />
             </div>
           </div>
           <div className="videoComments"></div>
         </div>
       </div>
-      <Comments />
+      <Comments videoId={videoId} />
+     
     </>
   );
 };

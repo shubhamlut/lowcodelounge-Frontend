@@ -26,6 +26,8 @@ const Loginscreen = () => {
       setSuccessMsg(true)
       setErrorMsg(false)
       localStorage.setItem("token", response.jwtToken);
+      localStorage.setItem("userName",response.userName)
+      localStorage.setItem("userId",response.userId)
       navigate('/')
     }
     else{

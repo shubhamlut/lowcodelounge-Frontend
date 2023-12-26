@@ -73,14 +73,14 @@ const Signup = () => {
         return error.msg;
       });
 
-      setErrorMessage(errorMessages.join(","));
+      setErrorMessage(errorMessages.join(", "));
       setValidationError(true);
     } else if (response.errors) {
       errorMessages = response.errors.map((error) => {
         return error.msg;
       });
 
-      setErrorMessage(errorMessages.join(","));
+      setErrorMessage(errorMessages.join(", "));
       setValidationError(true);
     }
   };
@@ -154,10 +154,7 @@ const Signup = () => {
                 placeholder="Confirm Password"
                 onChange={handleOnChangeInput}
               />
-              {invalidPassword && (
-                <p className="confirmPasswordErrorMsg">{errorMessage}</p>
-              )}
-              {validationError && (
+              {(invalidPassword || validationError) && (
                 <p className="confirmPasswordErrorMsg">{errorMessage}</p>
               )}
               <button

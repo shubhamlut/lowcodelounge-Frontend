@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Card.css";
 
-const Card = ({ courseId, cardLabel, cardDesc, courseDesc }) => {
+const Card = ({ courseId, cardLabel, cardDesc, courseDesc,thumbnail }) => {
   const navigate = useNavigate();
   //Action Functions
   const handleButtonClick = (courseId, courseViewer) => {
@@ -14,7 +14,7 @@ const Card = ({ courseId, cardLabel, cardDesc, courseDesc }) => {
     <div className="card">
       <div className="cardPicture">
         <img
-          src="https://2829105.fs1.hubspotusercontent-na1.net/hubfs/2829105/Featured%20Image%20Homepage%20Logo%20ONLY.png"
+          src={thumbnail}
           alt="Description of the image"
         />
       </div>
@@ -27,7 +27,7 @@ const Card = ({ courseId, cardLabel, cardDesc, courseDesc }) => {
             <button
               key={courseId}
               onClick={() => {
-                handleButtonClick(courseId, "/courseViewer");
+                handleButtonClick(courseId, `/courseViewer?courseId=${courseId}`);
               }}
             >
               Start Watching

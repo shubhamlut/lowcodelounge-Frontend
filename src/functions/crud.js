@@ -25,6 +25,31 @@ const create = async (url, requestBody) => {
   }
 };
 
+const get = async (url) => {
+  let response;
+  let jsonResponse;
+  try {
+    response = await fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    if (!response.ok) {
+      throw new Error(response.status);
+    } else {
+      return (jsonResponse = await response.json());
+    }
+  } catch (error) {
+    jsonResponse = await response.json();
+    return {
+      success: false,
+      jsonResponse,
+    };
+  }
+};
+
 module.exports = {
   create,
+  get,
 };

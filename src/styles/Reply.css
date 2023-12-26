@@ -1,0 +1,45 @@
+.replyComment input {
+  width: 22vw;
+  margin-left: 50px;
+  height: 3vh;
+  border-radius: 5px;
+}
+
+.replyComment {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+.btnPostReply button {
+  padding: 3px 3px 3px 3px;
+  background-color: rgb(40, 40, 135);
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btnCancelReply button {
+  padding: 3px 3px 3px 3px;
+  border: none;
+  background-color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.viewReplies {
+  margin-left: 48px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: start;
+  border-radius: 10px;
+  padding: 2px;
+  background-color: #dddd;
+  width: 80px;
+  cursor: pointer;
+  font-size: small;
+}
