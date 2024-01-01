@@ -2,21 +2,17 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Card.css";
 
-const Card = ({ courseId, cardLabel, cardDesc, courseDesc,thumbnail }) => {
+const Card = ({ courseId, cardLabel, cardDesc, courseDesc, thumbnail }) => {
   const navigate = useNavigate();
   //Action Functions
-  const handleButtonClick = (courseId, courseViewer) => {
+  const handleButtonClick = (courseViewer) => {
     navigate(courseViewer);
-    console.log(courseId);
   };
   //Component JSX
   return (
     <div className="card">
       <div className="cardPicture">
-        <img
-          src={thumbnail}
-          alt="Description of the image"
-        />
+        <img src={thumbnail} alt="Description of the image" />
       </div>
       <div className="cardDetails">
         <div className="cardDetailsColOne">
@@ -27,7 +23,7 @@ const Card = ({ courseId, cardLabel, cardDesc, courseDesc,thumbnail }) => {
             <button
               key={courseId}
               onClick={() => {
-                handleButtonClick(courseId, `/courseViewer?courseId=${courseId}`);
+                handleButtonClick(`/courseViewer?courseId=${courseId}`);
               }}
             >
               Start Watching

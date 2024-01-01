@@ -9,6 +9,9 @@ const WelcomePage = () => {
         <h1>
           Welcome to <span className="appNameLabel">LowCodeLounge</span>
         </h1>
+        <h2>
+         Learn with <span className="appNameLabel">Passion</span>
+        </h2>
         <p className="landingPageParagraph">
           Welcome to LowCodeLounge, where innovation meets excellence. We are
           more than just a product – we are a solution crafted with passion and

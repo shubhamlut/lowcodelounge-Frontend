@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost&family=Nunito&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300;400&display=swap');
 
 .WelcomePageWrapper {
   /* background-color: aqua; */
@@ -17,7 +17,7 @@
   font-size: larger;
 }
 .welcomeTextWrapper h1 {
-  font-family: "Jost", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 .imagesWrapper {
@@ -33,16 +33,17 @@
 }
 
 .appNameLabel {
-  color: rgb(40, 40, 135);
+  color: #3F72AF
 }
 
 .landingPageParagraph {
-  font-weight: lighter;
-  font-size: smaller;
+  font-weight:light;
+  font-size: large;
   color: rgb(79, 79, 80);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Nunito", sans-serif;
 }
+
+
 .welcomePageButtons {
   display: flex;
   flex-direction: row;
@@ -52,7 +53,7 @@
   width: 100px;
   height: 30px;
   border-radius: 5px;
-  background-color: rgb(40, 40, 135);
+  background-color:#112D4E;
   color: white;
   font-weight: bold;
   border: none;
@@ -63,9 +64,13 @@
   width: 100px;
   height: 30px;
   border-radius: 5px;
-  background-color: rgb(198, 198, 198);
-  color: #040404;
+  background-color: #ece8e8;
+  color: #000000;
   font-weight: bold;
   border: none;
   cursor: pointer;
 }
+
+
+
+

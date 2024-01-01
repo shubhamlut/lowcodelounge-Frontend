@@ -7,6 +7,7 @@ import VideoSection from "./VideoSection";
 import WelcomePage from "./WelcomePage";
 import CoursesCardContainer from "./CoursesCardContainer";
 import Loginscreen from "./Loginscreen";
+import Logo from "./Logo";
 
 const Home = () => {
   return (

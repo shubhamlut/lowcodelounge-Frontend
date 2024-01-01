@@ -1,0 +1,40 @@
+.learningPageHeader {
+  background-color: #333;
+  height: 10vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.learningPageNavOptions {
+  background-color: #333;
+  color: #dddd;
+  display: flex;
+  padding-left: 100px;
+  height: 3vh;
+  font-size: large;
+  font-weight:bold;
+
+  gap: 30px;
+}
+
+.learningPageNavOptions div:hover {
+  cursor: pointer;
+  color: white;
+
+  /* background-color: rgb(73, 72, 72); */
+}
+.learningPageHeader h2 {
+  padding-left: 100px;
+}
+
+.MylearningCourses {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}

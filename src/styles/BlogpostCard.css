@@ -1,0 +1,82 @@
+.blogpostcard {
+  background-color: #f9f7f7;
+  width: 20vw;
+  height: 34vh;
+  box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.blogTitle {
+  font-weight: bold;
+  font-size: larger;
+  background-color: aliceblue;
+  padding-left: 5px;
+  padding-top: 25px;
+  justify-content: flex-start;
+  align-content: center;
+  display: flex;
+  margin: 5px;
+}
+
+.blogProfile {
+  font-size: small;
+  font-weight: light;
+  background-color: white;
+  height: 15px;
+  width: 450px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+  margin: 5px;
+}
+
+.blogAddedOn {
+  color: #3f72af;
+  font-size: smaller;
+}
+
+.blogprofileName {
+  color: #3f72af;
+  font-size: small;
+}
+
+.profileImage {
+  height: 70px;
+  width: 80px;
+  background-color: #3f72af;
+  object-fit: cover;
+}
+.profileImage img {
+  height: 100%;
+  width: 100%;
+  background-color: #f9f7f7;
+}
+
+.blogContentBody {
+  padding: 10px;
+  background-color: white;
+  margin: 5px;
+  justify-content: center;
+}
+
+.btnBlogReadMore {
+  padding: 10px;
+}
+
+.btnBlogReadMore button {
+  width: 90px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #3f72af;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.btnBlogReadMore button:hover {
+  background-color: #7db0ed;
+}

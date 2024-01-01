@@ -1,0 +1,31 @@
+.BlogFullScreen {
+  display: flex;
+  justify-content: center;
+  background-color: #fbfdff;
+  width: 100vw;
+  height: 100vh;
+}
+
+.blogContainer {
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 50vw;
+  flex-direction: column;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.BlogFSTitle {
+  width: 40vw;
+  font-weight: bold;
+
+  justify-content: center;
+padding: 50px;
+  display: flex;
+}
+
+.BlogFS {
+  width: 40vw;
+  font-size: larger;
+}

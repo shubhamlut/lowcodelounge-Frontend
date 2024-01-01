@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Comments.css";
 import profileIcon2 from "../images/profileIcon2.png";
-const AddedReplyComment = ({ userName, comment,addedOn }) => {
+const AddedReplyComment = ({ userName, comment, addedOn }) => {
   return (
     <div className="addedComments">
       <div className="commentsProfileIcon">
@@ -13,7 +13,6 @@ const AddedReplyComment = ({ userName, comment,addedOn }) => {
           {userName} <span>{addedOn}</span>
         </div>
         <div className="profileComment">{comment}</div>
-        
       </div>
     </div>
   );

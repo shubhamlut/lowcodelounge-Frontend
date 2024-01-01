@@ -3,6 +3,7 @@
   justify-content: center;
   margin-top: 20px;
   flex-direction: column;
+  color:#112D4E
 }
 
 .heading {
@@ -20,10 +21,4 @@
   flex-wrap: wrap;
 }
 
-.coursesCardWrapper > div {
-  width: calc(
-    28.33% - 10px
-  ); /* Adjust width and margin based on your preference */
-  margin-bottom: 20px; /* Adjust margin based on your preference */
-  box-sizing: border-box
-}
+

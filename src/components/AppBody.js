@@ -4,14 +4,13 @@ import "../styles/AppBody.css";
 import { useLocation } from "react-router-dom";
 const crudFunctions = require("../functions/crud");
 const AppBody = () => {
-
-
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const courseId = queryParams.get("courseId");
   //Hooks
 
   const [videosData, setVideosData] = useState([]);
+  const [courseVideoCount, setCourseVideoCount] = useState("");
 
   useEffect(() => {
     fetchAllCourseVideos();
@@ -23,8 +22,11 @@ const AppBody = () => {
     const courseVideos = await crudFunctions.get(
       `http://localhost:5000/api/video/getCourseVideos/${courseId}`
     );
+    const videosLength = courseVideos.length;
+    setCourseVideoCount(videosLength);
     setVideosData(courseVideos);
   };
+
   //API sample response
   // const videosData1 = [
   //   {
@@ -58,13 +60,13 @@ const AppBody = () => {
 
   return (
     <div className="AppBody">
-      <div className="actionArrow">
+      {/* <div className="actionArrow">
         <i
           className={`fa-solid fa-caret-${arrowDirection} fa-xl`}
           onClick={toggleArrowDirection}
         ></i>
       </div>
-      {arrowDirection === "left" && <div className="menu">Menu Options</div>}
+      {arrowDirection === "left" && <div className="menu">Menu Options</div>} */}
 
       <div className="content">
         {/* using map function to create multiple video sections based on API response */}
@@ -76,6 +78,9 @@ const AppBody = () => {
               videoDesc={videoData.description}
               videoDuration={videoData.duration}
               videoId={videoData.videoId}
+              totalVideos = {courseVideoCount}
+              courseId= {courseId}
+              videoIndex = {videoData.index}
             />
           );
         })}

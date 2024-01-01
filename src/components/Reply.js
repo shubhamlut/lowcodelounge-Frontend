@@ -28,6 +28,9 @@ const Reply = ({
       setreplyWindowActive(false);
       fetchVideoComments()
     }
+    else{
+      setreplyWindowActive(false)
+    }
   };
 
   //#3

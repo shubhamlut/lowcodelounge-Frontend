@@ -1,0 +1,34 @@
+.blogPageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.blogCardContainer{
+display: flex;
+flex-direction: row ;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.blogWallpaper img {
+  width: 100vw;
+  height: 65vh;
+  object-fit: cover;
+}
+
+.blogHeader {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 100px;
+  font-size: large;
+  height: 4vh;
+  width: 100vw;
+  background-color: #a0bdde;
+  color: white;
+}
+
+.blogPageHeader {
+  color: #1d3e63;
+}

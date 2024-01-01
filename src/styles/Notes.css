@@ -3,15 +3,13 @@
   display: flex;
   flex-direction: column;
   margin-left: 1px;
-  /* justify-content: center; */
   height: 600px;
   color: #333;
-  background-color: rgb(255, 255, 255);
   border-radius: 5px;
   padding-left: 10px;
   padding-right: 10px;
-  /* border-left: 1px solid rgb(118, 118, 118); */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  background-color: #F9F7F7;
 }
 .notesAdded {
   height: 50px;
@@ -23,24 +21,30 @@
     
 }
 .addNotes button{
-    padding: 3px 3px 3px 3px;
-    background-color:  rgb(40, 40, 135);
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #3f72af;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
 }
 
 .addedNotesTitle {
-  text-decoration: underline;
+ 
   font-size: medium;
   font-weight: bold;
+  color:#112D4E;
+
+  
 }
 
 .addedNotesList {
   width: 25vw;
   height: 210px;
   overflow: auto;
+  font-family: "Nunito", sans-serif;
 }
 .notesTextArea textarea {
   width: 98%;
@@ -48,4 +52,19 @@
   border-radius: 5px;
   /* border: none; */
   margin-left: 2px;
+  resize: none;
+  font-family: "Nunito", sans-serif;
+  font-size: medium;
+  
+}
+
+.notestextareaHeader{
+  font-size: larger;
+  font-weight: bold;
+  width: 22vh;
+  height: 30px;
+  /* text-align: center; */
+  border-radius: 10px;
+  color:#112D4E;
+  padding: 1px;
 }

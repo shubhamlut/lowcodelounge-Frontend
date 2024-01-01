@@ -1,32 +1,45 @@
 .Comments {
   width: 90vh;
-  height: 150px;
-  padding-left: 10px;
+  height: 180px;
+  padding: 10px;
   box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   margin-left: 50px;
+  margin-top: 10px;
+  background-color: #F9F7F7;
 }
 
 .commentsTextArea {
-  width: 88vh;
+  width: 89vh;
   height: 100px;
   resize: none;
   border-radius: 5px;
+  margin-bottom: 20px;
+  font-family: "Nunito", sans-serif;
+  font-size: medium;
 }
 .commentHeader {
-  text-decoration: underline;
-  font-size: medium;
+
+  font-size: large;
   font-weight: bold;
+  width: 22vh;
+  height: 30px;
+  /* text-align: center; */
+  border-radius: 10px;
+  color:#112D4E;
+  padding: 1px;
+
 }
 
 .btnPostComment {
-  padding: 3px 3px 3px 3px;
-  background-color: rgb(40, 40, 135);
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #3f72af;
   color: white;
   font-weight: bold;
-  border-radius: 5px;
+  border: none;
   cursor: pointer;
-  margin-top: 15px;
 }
 .addedComments {
   display: flex;
@@ -53,11 +66,13 @@
   padding-bottom: 10px;
 }
 .replyButtonComment {
-  padding: 3px 3px 3px 3px;
-  background-color: rgb(40, 40, 135);
+  width: 60px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #3f72af;
   color: white;
   font-weight: bold;
-  border-radius: 5px;
+  border: none;
   cursor: pointer;
 }
 .addedComment {

@@ -11,11 +11,14 @@ const VideoSection = ({
   videoDesc,
   videoDuration,
   videoId,
+  totalVideos,
+  courseId,
+  videoIndex
 }) => {
   const navigate = useNavigate();
   const handleActionClick = (videoId) => {
     console.log(videoId);
-    navigate(`/videoPlayer?url=${videoId}`);
+    navigate(`/videoPlayer?courseId=${courseId}&total=${totalVideos}&video=${videoIndex}`);
   };
   return (
     <div

@@ -83,6 +83,7 @@ const Notes = ({ videoId }) => {
           cols="50"
           value={writeNote}
           onChange={handleTextAreaOnChange}
+          placeholder="Note down important points"
         ></textarea>
       </div>
       <div className="addNotes">
