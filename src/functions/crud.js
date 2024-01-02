@@ -49,7 +49,23 @@ const get = async (url) => {
   }
 };
 
+const update = async (url, requestBody,authToken) => {
+  let response;
+  let jsonResponse;
+  try {
+    await fetch(url, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        "auth-token": authToken,
+      },
+      body: JSON.stringify(requestBody),
+    });
+  } catch (error) {}
+};
+
 module.exports = {
   create,
   get,
+  update
 };

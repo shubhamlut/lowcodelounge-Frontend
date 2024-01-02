@@ -9,18 +9,17 @@
   padding-left: 10px;
   padding-right: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  background-color: #F9F7F7;
+  background-color: #f9f7f7;
 }
 .notesAdded {
   height: 50px;
 }
-.addNotes{
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    
+.addNotes {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
 }
-.addNotes button{
+.addNotes button {
   width: 80px;
   height: 30px;
   border-radius: 5px;
@@ -32,12 +31,9 @@
 }
 
 .addedNotesTitle {
- 
   font-size: medium;
   font-weight: bold;
-  color:#112D4E;
-
-  
+  color: #112d4e;
 }
 
 .addedNotesList {
@@ -55,16 +51,42 @@
   resize: none;
   font-family: "Nunito", sans-serif;
   font-size: medium;
-  
 }
 
-.notestextareaHeader{
+.notestextareaHeader {
   font-size: larger;
   font-weight: bold;
   width: 22vh;
   height: 30px;
   /* text-align: center; */
   border-radius: 10px;
-  color:#112D4E;
+  color: #112d4e;
   padding: 1px;
+}
+
+.notesEditIcon {
+  font-size: smaller;
+  cursor: pointer;
+}
+
+.noteEditArea textarea {
+  /* resize: none; */
+  border: none;
+  border-radius: 4px;
+  border: 1px solid #3f72af;
+  font-family: "Nunito", sans-serif;
+  font-size: medium;
+}
+
+.noteEditContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.noteUpdateBtn,
+.noteCancelButton {
+  cursor: pointer;
+  font-size: large;
 }

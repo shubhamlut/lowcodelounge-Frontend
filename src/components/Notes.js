@@ -35,6 +35,8 @@ const Notes = ({ videoId }) => {
   //component Hooks
   const [writeNote, setWriteNote] = useState("");
   const [notesList, setNotesList] = useState([]);
+  const [editedNote, setEditedNote] = useState("");
+  const [activeNoteId, setActiveNoteId] = useState(null);
 
   useEffect(() => {
     fetchVideoNotes();
@@ -55,12 +57,40 @@ const Notes = ({ videoId }) => {
 
     //Updating the DB
 
-    crudFunctions.create("http://localhost:5000/api/notes/addNote",newNote)
+    crudFunctions.create("http://localhost:5000/api/notes/addNote", newNote);
   };
 
+  //Updating the note in DB
+
+  const updateNote = async (noteId) => {
+    let updatedNote = {
+      note: editedNote,
+    };
+    await crudFunctions.update(
+      `http://localhost:5000/api/notes/updateNote/${noteId}`,
+      updatedNote,
+      localStorage.getItem("token")
+    );
+    setActiveNoteId(null);
+    fetchVideoNotes();
+  };
   //   This function is used set the textArea which whatever written in the box
   const handleTextAreaOnChange = (e) => {
     setWriteNote(e.target.value);
+  };
+
+  const handleEditNoteOnChange = (e) => {
+    setEditedNote(e.target.value);
+  };
+  const handleEditNoteClick = (action, noteId, note) => {
+    if (action === "edit") {
+      setActiveNoteId(noteId);
+      setEditedNote(note);
+    } else if (action === "save") {
+      updateNote(noteId);
+    } else {
+      setActiveNoteId(null);
+    }
   };
 
   const userId = localStorage.getItem("userId");
@@ -78,7 +108,7 @@ const Notes = ({ videoId }) => {
         <h2 className="notestextareaHeader">Notes</h2>
         <textarea
           id="myTextarea"
-          name="myTextarea"
+          name="notesArea"
           rows="4"
           cols="50"
           value={writeNote}
@@ -100,7 +130,59 @@ const Notes = ({ videoId }) => {
         <div className="addedNotesList">
           <ol>
             {notesList.map((noteData) => {
-              return <li>{noteData.note}</li>;
+              return (
+                <>
+                  {/* List Notes */}
+                  <li>
+                    {noteData.note}{" "}
+                    <span className="notesEditIcon">
+                      <i
+                        onClick={() => {
+                          handleEditNoteClick(
+                            "edit",
+                            noteData._id,
+                            noteData.note
+                          );
+                        }}
+                        class="fa-solid fa-pencil"
+                      ></i>
+                    </span>
+                  </li>
+
+                  {/* Edit note */}
+                  {activeNoteId === noteData._id && (
+                    <div className="noteEditContainer">
+                      <div className="noteEditArea">
+                        <textarea
+                          name=""
+                          value={editedNote}
+                          onChange={handleEditNoteOnChange}
+                          id=""
+                          cols="30"
+                          rows="2"
+                        ></textarea>
+                      </div>
+                      <div className="noteUpdateBtn">
+                        <i
+                          class="fa-solid fa-check"
+                          onClick={() => {
+                            handleEditNoteClick("save", noteData._id, null);
+                          }}
+                        ></i>
+                      </div>
+                      <div className="noteCancelButton">
+                        {" "}
+                        <i
+                          onClick={() => {
+                            handleEditNoteClick("", null, null);
+                          }}
+                          class="fa-solid fa-xmark"
+                        ></i>
+                      </div>
+                    </div>
+                  )}
+                </>
+              );
             })}
           </ol>
         </div>

@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 1px;
-  background-color: #F9F7F7;
+  background-color: rgb(255, 255, 255);
 }
 .blankSpace {
   height: 20px;
@@ -19,11 +19,9 @@
 .profileName {
   padding-top: 10px;
   width: 180px;
-  font-weight: normal;
 }
 
 .hoverRowOne {
- 
   border-bottom: 1px solid #dddddd;
   height: 60px;
   padding: 1px 1px 1px 1px;
@@ -35,29 +33,24 @@
 }
 .options {
   padding-top: 20px;
-  font-weight: normal;
 }
 
 .hoverRowTwo {
-  /* border-bottom: 1px solid grey; */
   height: 35px;
   padding: 1px 1px 1px 1px;
 }
 
 .hoverRowThree {
-  /* border-bottom: 1px solid grey; */
   height: 35px;
   padding: 1px 1px 1px 1px;
 }
 
 .hoverRowFour {
-  /* border-bottom: 1px solid grey; */
   height: 35px;
   padding: 1px 1px 1px 1px;
 }
 
 .hoverRowFive {
-  /* border-bottom: 1px solid grey; */
   height: 35px;
   padding: 1px 1px 1px 1px;
 }
@@ -67,7 +60,7 @@
 
   display: flex;
   flex-direction: row;
-  /* background-color: aqua; */
+
   gap: 20px;
   height: 55px;
 }
@@ -78,12 +71,9 @@
 }
 .courseDesc {
   padding-top: 5px;
-  font-weight: bold;
-  font-size: normal;
 }
 
+.optionhover:hover {
+  background-color: #e4e6ea;
 
-.optionhover:hover{
-background-color: #e4e6ea;
-/* color: #3F72AF; */
 }
