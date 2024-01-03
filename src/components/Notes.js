@@ -45,19 +45,23 @@ const Notes = ({ videoId }) => {
   //*****ACTIONS FUNCTIONS********
 
   //   This function is used to handle different action buttons
-  const handleButtonClick = (action) => {
+  const handleButtonClick = async (action) => {
     let newNote = {
       note: writeNote,
       userId: userId,
       videoId: videoId,
     };
     //Updating the UI
-    setNotesList((notesList) => [...notesList, newNote]);
+    // setNotesList((notesList) => [...notesList, newNote]);
     setWriteNote("");
 
     //Updating the DB
 
-    crudFunctions.create("http://localhost:5000/api/notes/addNote", newNote);
+    await crudFunctions.create(
+      "http://localhost:5000/api/notes/addNote",
+      newNote
+    );
+    fetchVideoNotes();
   };
 
   //Updating the note in DB
@@ -66,6 +70,7 @@ const Notes = ({ videoId }) => {
     let updatedNote = {
       note: editedNote,
     };
+
     await crudFunctions.update(
       `http://localhost:5000/api/notes/updateNote/${noteId}`,
       updatedNote,
@@ -116,8 +121,13 @@ const Notes = ({ videoId }) => {
           placeholder="Note down important points"
         ></textarea>
       </div>
+
+      {/* Add Note Button */}
       <div className="addNotes">
         <button
+          className={`btnAddNotes ${
+            writeNote.length > 0 ? "" : "disabledButton"
+          }`}
           onClick={() => {
             handleButtonClick("addnote");
           }}

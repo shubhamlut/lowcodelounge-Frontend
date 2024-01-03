@@ -39,7 +39,7 @@ const Comments = ({ videoId }) => {
       userName: localStorage.getItem("userName"),
     };
     //Updating the UI
-    // SetCommentsList((commentsList) => [...commentsList, newComment]);
+    SetCommentsList((commentsList) => [...commentsList, newComment]);
 
     //Updating the DB
     crudFunctions.create(
@@ -47,7 +47,7 @@ const Comments = ({ videoId }) => {
       newComment
     );
     setWriteComment("");
-    fetchVideoComments();
+    // fetchVideoComments();
   };
 
   // #2
@@ -137,7 +137,7 @@ const Comments = ({ videoId }) => {
         placeholder="Add your comment"
       ></textarea>
       <button
-        className="btnPostComment"
+        className={`btnPostComment ${writeComment.length>0?"":"disabledButton"}`}
         onClick={() => {
           handleActionClick("addComment");
         }}

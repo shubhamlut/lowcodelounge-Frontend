@@ -6,7 +6,7 @@
   border-radius: 5px;
   margin-left: 50px;
   margin-top: 10px;
-  background-color: #F9F7F7;
+  background-color: #f9f7f7;
 }
 
 .commentsTextArea {
@@ -19,16 +19,14 @@
   font-size: medium;
 }
 .commentHeader {
-
   font-size: large;
   font-weight: bold;
   width: 22vh;
   height: 30px;
   /* text-align: center; */
   border-radius: 10px;
-  color:#112D4E;
+  color: #112d4e;
   padding: 1px;
-
 }
 
 .btnPostComment {
@@ -40,6 +38,16 @@
   font-weight: bold;
   border: none;
   cursor: pointer;
+}
+
+.disabledButton {
+  border-radius: 5px;
+  background-color: #cdcfd0;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 .addedComments {
   display: flex;

@@ -19,7 +19,8 @@
   flex-direction: row;
   justify-content: end;
 }
-.addNotes button {
+
+.btnAddNotes {
   width: 80px;
   height: 30px;
   border-radius: 5px;
@@ -28,6 +29,18 @@
   font-weight: bold;
   border: none;
   cursor: pointer;
+}
+
+.disabledButton {
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #cdcfd0;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .addedNotesTitle {
