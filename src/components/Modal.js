@@ -9,14 +9,14 @@ const Modal = ({
   cancleBtn,
   actionBtn,
   openModalBoolean,
-  handleAction
+  handleAction,
 }) => {
   const [openModal, setOpenModal] = useState(openModalBoolean);
 
   const TriggerOnBtnRightClick = () => {
     // props.triggerOnClick()
     setOpenModal(false);
-    handleAction()
+    handleAction();
   };
 
   const closeModal = () => {
@@ -38,7 +38,6 @@ const Modal = ({
           <div className="modal-footer">
             {/* <div className="left-corner">
             </div> */}
-
             <button className="btn-left" onClick={closeModal}>
               {cancleBtn}
             </button>

@@ -1,0 +1,33 @@
+.grid {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+    height: 30vh;
+  }
+  
+  .tableCore {
+    width: 70%;
+    height: 10vh;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th,
+  td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  tr {
+    border-bottom: 2px solid #dddddd; /* Add border to table rows */
+  }
+  
+  th {
+    background-color: rgb(230, 230, 230);
+  }

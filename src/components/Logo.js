@@ -1,13 +1,12 @@
 import React from "react";
 import "../styles/Logo.css";
 const Logo = () => {
+  const codeStyle = {
+    fontFamily: "font-family: 'Nanum Gothic Coding', monospace;",
 
-    const codeStyle = {
-        fontFamily: "font-family: 'Nanum Gothic Coding', monospace;",
-       
-        // You can add other styles like fontSize, fontWeight, etc., if needed
-      };
-      const codeContent = "{Code}";
+    // You can add other styles like fontSize, fontWeight, etc., if needed
+  };
+  const codeContent = "{Code}";
   return (
     <div className="logo">
       <div className="dots">
@@ -17,9 +16,7 @@ const Logo = () => {
       </div>
 
       <div className="brandText">
-    
-          <b> Low<code style={codeStyle}>{codeContent}</code>Lounge</b>
-      
+        <b> BEASTTHATCODES</b>
       </div>
     </div>
   );

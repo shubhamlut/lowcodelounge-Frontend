@@ -15,6 +15,7 @@ import Loginscreen from "./components/Loginscreen";
 import Signup from "./components/Signup";
 import Navbar from "./components/Navbar";
 import BlogFullScreen from "./components/BlogFullScreen";
+import AdminDashboard from "./components/AdminDashboard";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/login" element={<Loginscreen />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/blogpost" element={<BlogFullScreen />} />
+        <Route path="/admindashboard" element={<AdminDashboard />} />
       </Routes>
     </Router>
   );
