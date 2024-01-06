@@ -35,7 +35,7 @@ const HoverContentProfile = () => {
         </div>
         {modelOpen &&
           <Modal
-            openModalBoolean={true}
+            openModalBoolean={modelOpen}
             description="Are you sure you want to logout?"
             title="Please confirm"
             cancleBtn="Cancel"

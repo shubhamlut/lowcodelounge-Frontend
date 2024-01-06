@@ -1,6 +1,25 @@
-.admindashboard{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.admindashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.adminActionButtons {
+  display: flex;
+  gap: 25px;
+  position: relative;
+  left: 42vw;
+ 
+}
+
+.adminDashboardButton {
+  
+  height: 30px;
+  border-radius: 5px;
+  background-color: #202f41;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
 }

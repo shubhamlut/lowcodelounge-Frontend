@@ -7,7 +7,7 @@
   }
   
   .tableCore {
-    width: 70%;
+    width: 95%;
     height: 10vh;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
@@ -29,5 +29,6 @@
   }
   
   th {
-    background-color: rgb(230, 230, 230);
+    background-color: #3f72af;
+    color: white;
   }

@@ -8,6 +8,8 @@ const Grid = ({ data, removeItemFromBag, AddToBag }) => {
   const [columns, setColumns] = useState("[{}]");
   const [columnReady, setColumnReady] = useState(false);
   const [editModalState, setEditModalState] = useState(false);
+  const [selectedVideo, setSelectedVideo] = useState({});
+  const [videoData, setVideoData] = useState({});
 
   //This is triggered on page load
   useEffect(() => {
@@ -28,15 +30,15 @@ const Grid = ({ data, removeItemFromBag, AddToBag }) => {
 
   //This function is used to create the table rows
   const renderTableCell = (row, col) => {
-    console.log(row, col);
-    // if (col.field === "edit") {
-    //   return <td dangerouslySetInnerHTML={{ __html: row[col.field] }} />;
-    // } else
     if (col.field === "Edit") {
       return (
         <td>
           <div className="edit-row-button">
-            <i class="fa-solid fa-pencil" onClick={() => ModalState()}></i>
+            <i
+              data-key={row.VideoId}
+              onClick={ModalState}
+              class="fa-solid fa-pencil"
+            ></i>
           </div>
         </td>
       );
@@ -46,11 +48,17 @@ const Grid = ({ data, removeItemFromBag, AddToBag }) => {
   };
 
   // This function set the  modalState to true and opens it
-  const ModalState = () => {
+  const ModalState = (e) => {
+    console.log(e.target.dataset.key);
     if (editModalState) {
+      console.log(editModalState);
       setEditModalState(false);
     } else {
       setEditModalState(true);
+      let video = data.filter((video) => {
+        return video.VideoId === e.target.dataset.key;
+      });
+      setVideoData(video[0]);
     }
   };
 
@@ -74,7 +82,7 @@ const Grid = ({ data, removeItemFromBag, AddToBag }) => {
           </table>
         </div>
       )}
-      {editModalState && <EditModal />}
+      {editModalState && <EditModal videoData = {videoData} />}
     </>
   );
 };

@@ -17,16 +17,89 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 800px;
-  height: 500px;
+  width: 90vw;
+  height: 89vh;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   font-family: "Nunito", sans-serif;
 }
 
-.videoDetailsContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+.videoDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
 }
+
+.inputText {
+  height: 25px;
+  width: 33vw;
+  font-size: medium;
+  border-radius: 6px;
+}
+
+.editModalFooterButtons {
+  display: flex;
+  gap: 360px;
+  margin-top: 10px;
+}
+.editModalFooterButtons button {
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #3f72af;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.editModalVdoName {
+  width: 32vw;
+}
+textarea {
+  resize: none;
+  font-family: "Nunito", sans-serif;
+  font-size: medium;
+
+}
+
+.editModalHeader {
+  display: flex;
+  gap: 1px;
+  flex-direction: row;
+}
+
+.edit-row-button:hover{
+    cursor: pointer;
+}
+/* .vdoNameContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.vdoDescContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.vdoDuraContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.vdoThumContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.vdoCourseContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.vdoSeqContainer {
+  display: flex;
+  flex-direction: column;
+} */
