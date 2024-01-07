@@ -14,12 +14,14 @@ const AdminDashboard = () => {
 
   const [videoList, setVideoList] = useState([]);
 
+  //   function to fetch all the videos
   const fetchAllVideos = async () => {
     const videos = await crudFuctions.get(
       "http://localhost:5000/api/video/getVideos"
     );
 
-    const test = videos.map((video) => {
+    // This is used to format the retrieved videoList from DB
+    const formattedVideos = videos.map((video) => {
       return {
         VideoIndex: video.index,
         Name: video.name,
@@ -32,8 +34,12 @@ const AdminDashboard = () => {
       };
     });
 
-    setVideoList(test);
+    setVideoList(formattedVideos);
   };
+
+  //function to fetch all the courses
+
+  const fetchAllCourses = () => {};
 
   return (
     <div className="admindashboard">
