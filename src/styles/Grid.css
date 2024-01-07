@@ -1,34 +1,43 @@
 .grid {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-top: 10px;
-    height: 30vh;
-  }
-  
-  .tableCore {
-    width: 95%;
-    height: 10vh;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  th,
-  td {
-    border: 1px solid #dddddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  tr {
-    border-bottom: 2px solid #dddddd; /* Add border to table rows */
-  }
-  
-  th {
-    background-color: #3f72af;
-    color: white;
-  }
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+  height: 30vh;
+}
+.column-name {
+  width: 200px;
+}
+.tableCore {
+  width: 98%;
+  height: 90%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+  width: 10px;
+  height: 5px;
+}
+
+tr {
+  border-bottom: 2px solid #dddddd; /* Add border to table rows */
+}
+
+th {
+  background-color: #3f72af;
+  color: white;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 25px;
+}

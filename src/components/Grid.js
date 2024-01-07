@@ -13,8 +13,10 @@ const Grid = ({ data, removeItemFromBag, AddToBag }) => {
 
   //This is triggered on page load
   useEffect(() => {
-    setColumns(createColumns(data[0]));
-  }, []);
+    if (data && data.length > 0) {
+      setColumns(createColumns(data[0]));
+    }
+  }, [data]);
 
   //This function creates the header of the table
   const createColumns = (data) => {
@@ -28,23 +30,46 @@ const Grid = ({ data, removeItemFromBag, AddToBag }) => {
     return columnsData;
   };
 
+  // This function is used to trim the words
+  const trimToWords = (originalText, wordLimit) => {
+    const words = originalText.split(/\s+/);
+    const trimmedWords = words.slice(0, wordLimit);
+    return trimmedWords.join(" ");
+  };
+
   //This function is used to create the table rows
   const renderTableCell = (row, col) => {
-    if (col.field === "Edit") {
+    if (col.field === "Action") {
       return (
         <td>
-          <div className="edit-row-button">
-            <i
-              data-key={row.VideoId}
-              onClick={ModalState}
-              class="fa-solid fa-pencil"
-            ></i>
+          <div className="action-buttons">
+            <div className="edit-row-button">
+              <i
+                data-key={row.VideoId}
+                onClick={ModalState}
+                class="fa-solid fa-pencil"
+              ></i>
+            </div>
+
+            <div className="delete-row-button">
+              <i
+                data-key={row.VideoId}
+                onClick={ModalState}
+                class="fa-solid fa-trash"
+              ></i>
+            </div>
           </div>
         </td>
       );
     }
 
-    return <td>{row[col.field]}</td>;
+    return (
+      <td>
+        {col.field === "Description"
+          ? trimToWords(row[col.field], 10) + "..."
+          : row[col.field]}
+      </td>
+    );
   };
 
   // This function set the  modalState to true and opens it
@@ -82,7 +107,7 @@ const Grid = ({ data, removeItemFromBag, AddToBag }) => {
           </table>
         </div>
       )}
-      {editModalState && <EditModal videoData = {videoData} />}
+      {editModalState && <EditModal videoData={videoData} />}
     </>
   );
 };
