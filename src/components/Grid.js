@@ -20,12 +20,14 @@ const Grid = ({ data, removeItemFromBag, AddToBag }) => {
 
   //This function creates the header of the table
   const createColumns = (data) => {
-    const columnsData = Object.keys(data).map((key) => {
-      return {
-        field: key,
-        header: key.charAt(0).toUpperCase() + key.slice(1),
-      };
-    });
+    const columnsData = Object.keys(data)
+      .filter((item) => item !== "_id")
+      .map((key) => {
+        return {
+          field: key,
+          header: key.charAt(0).toUpperCase() + key.slice(1),
+        };
+      });
     setColumnReady(true);
     return columnsData;
   };
@@ -63,6 +65,10 @@ const Grid = ({ data, removeItemFromBag, AddToBag }) => {
       );
     }
 
+    if (col.field === "_id") {
+      return;
+    }
+
     return (
       <td>
         {col.field === "Description"
@@ -74,9 +80,7 @@ const Grid = ({ data, removeItemFromBag, AddToBag }) => {
 
   // This function set the  modalState to true and opens it
   const ModalState = (e) => {
-    console.log(e.target.dataset.key);
     if (editModalState) {
-      console.log(editModalState);
       setEditModalState(false);
     } else {
       setEditModalState(true);

@@ -31,6 +31,7 @@ const AdminDashboard = () => {
         ThumbnailURL: video.thumbnail,
         CourseId: video.courseId,
         Action: "action",
+        _id:video._id
       };
     });
 

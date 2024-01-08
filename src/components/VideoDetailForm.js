@@ -1,18 +1,36 @@
 import React, { useState } from "react";
+import crudFunctions from "../functions/crud";
 
 const VideoDetailForm = ({ videoData, closeModal }) => {
   //Hooks
 
   const [videoObject, setVideoObject] = useState(videoData);
 
+  const updateVideo = (id) => {
+    let requestPayload = {
+      name: videoObject.Name,
+      description: videoObject.Description,
+      duration: videoObject.Duration,
+      videoId: videoObject.VideoId,
+      thumbnail: videoObject.ThumbnailURL,
+      courseId: videoObject.CourseId,
+      index: videoObject.VideoIndex,
+    };
 
+    crudFunctions.update(
+      `http://localhost:5000/api/video/updateVideo/${id}`,
+      requestPayload,
+      localStorage.getItem("token")
+    );
+  };
   const OnChangeVideoData = (e) => {
     setVideoObject((prevVideoDetail) => {
       const updatedVideoData = {
         ...prevVideoDetail,
         [e.target.name]: e.target.value,
       };
-      return updatedVideoData
+
+      return updatedVideoData;
     });
   };
   return (
@@ -120,7 +138,13 @@ const VideoDetailForm = ({ videoData, closeModal }) => {
 
             <div className="editModalFooterButtons">
               <button onClick={closeModal}>Cancel</button>
-              <button>Update</button>
+              <button
+                onClick={() => {
+                  updateVideo(videoObject._id);
+                }}
+              >
+                Update
+              </button>
             </div>
           </div>
         </div>
