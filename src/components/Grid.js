@@ -3,13 +3,17 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Grid.css";
 import EditModal from "./EditModal";
+import VideoDetailForm from "./VideoDetailForm";
 import Modal from "./Modal";
+import crudFunctions from "../functions/crud.js"
 const Grid = ({ data, removeItemFromBag, AddToBag }) => {
   const [columns, setColumns] = useState("[{}]");
   const [columnReady, setColumnReady] = useState(false);
   const [editModalState, setEditModalState] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState({});
   const [videoData, setVideoData] = useState({});
+  const [deleteModelState, setDeleteModalState] = useState(false);
+  const [videoId, setVideoId] = useState()
 
   //This is triggered on page load
   useEffect(() => {
@@ -56,7 +60,7 @@ const Grid = ({ data, removeItemFromBag, AddToBag }) => {
             <div className="delete-row-button">
               <i
                 data-key={row.VideoId}
-                onClick={ModalState}
+                onClick={deleteConfirmationModal}
                 class="fa-solid fa-trash"
               ></i>
             </div>
@@ -91,6 +95,23 @@ const Grid = ({ data, removeItemFromBag, AddToBag }) => {
     }
   };
 
+  const deleteConfirmationModal = (e) => {
+    if (deleteModelState) {
+      setDeleteModalState(false);
+    } else {
+      setDeleteModalState(true);
+      let videoId = data.filter((video) => {
+        return video.VideoId === e.target.dataset.key;
+      });
+
+      setVideoId(videoId[0]._id);
+    }
+  };
+
+  const deleteVideo = () =>{
+    crudFunctions.deleteOperation(`http://localhost:5000/api/video/deleteVideo/${videoId}`,localStorage.getItem("token"))
+  }
+
   return (
     <>
       {columnReady && (
@@ -111,7 +132,16 @@ const Grid = ({ data, removeItemFromBag, AddToBag }) => {
           </table>
         </div>
       )}
-      {editModalState && <EditModal videoData={videoData} />}
+      {editModalState && (
+        <EditModal
+          videoData={videoData}
+          VideoDetailForm={VideoDetailForm}
+          type="edit"
+        />
+      )}
+
+      {deleteModelState && (<Modal title="Please confirm" description="Are you sure you want to delete" openModalBoolean = {deleteModelState} cancleBtn="Cancel" actionBtn="Yes" handleAction={deleteVideo} />)}
+
     </>
   );
 };

@@ -49,7 +49,7 @@ const get = async (url) => {
   }
 };
 
-const update = async (url, requestBody,authToken) => {
+const update = async (url, requestBody, authToken) => {
   let response;
   let jsonResponse;
   try {
@@ -61,11 +61,33 @@ const update = async (url, requestBody,authToken) => {
       },
       body: JSON.stringify(requestBody),
     });
+  } catch (error) {
+    jsonResponse = await response.json();
+    return {
+      success: false,
+      jsonResponse,
+    };
+  }
+};
+
+const deleteOperation = async (url, authToken) => {
+  let response;
+  let jsonResponse;
+
+  try {
+    await fetch(url, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        "auth-token": authToken,
+      },
+    });
   } catch (error) {}
 };
 
 module.exports = {
   create,
   get,
-  update
+  update,
+  deleteOperation,
 };
