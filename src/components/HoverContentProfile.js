@@ -19,12 +19,16 @@ const HoverContentProfile = () => {
         <div className="profileIcon">
           <i class="fa-regular fa-user fa-2xl"></i>
         </div>
-        <div className="profileName">Shubham Lutade</div>
+        <div  onClick={()=>{
+          navigate("/profile")
+        }} className="profileName">Shubham Lutade</div>
       </div>
       <div className="options">
         <div className="hoverRowTwo optionhover">My Learning</div>
         <div className="hoverRowThree optionhover">Account Settings</div>
-        <div className="hoverRowFour optionhover">Help</div>
+        <div  onClick={()=>{
+          navigate("/help")
+        }} className="hoverRowFour optionhover">Help</div>
         <div
           onClick={() => {
             handleActionClick("logout");

@@ -1,0 +1,10 @@
+.help{
+    box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.1);
+    margin: 100px;
+    padding: 50px;
+}
+
+.pointOfContact{
+    color: #4a4a4add;
+    background-color: rgb(246, 242, 242);
+}

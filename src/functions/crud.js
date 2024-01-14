@@ -1,12 +1,13 @@
 // This files contains all the CRUD functions
 
-const create = async (url, requestBody) => {
+const create = async (url, requestBody,authToken) => {
   let response;
   try {
     response = await fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "auth-token": authToken,
       },
       body: JSON.stringify(requestBody),
     });
@@ -33,6 +34,7 @@ const get = async (url) => {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
+        "auth-token": localStorage.getItem("token"),
       },
     });
     if (!response.ok) {
